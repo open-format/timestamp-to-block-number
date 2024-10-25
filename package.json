@@ -1,0 +1,26 @@
+{
+  "name": "@openformat/timestamp-to-block-number",
+  "version": "0.0.1",
+  "scripts": {
+    "reinstall": "rm -rf .pnp* && yarn",
+    "clean": "rm -rf build/ generated/",
+    "prepare:local": "mustache networks/local.json subgraph.template.yaml subgraph.local.yaml",
+    "create:local": "graph create open-format/local --node http://0.0.0.0:8020",
+    "gen:local": "graph codegen subgraph.local.yaml",
+    "deploy:local": "graph deploy open-format/local --ipfs http://0.0.0.0:5001 --node http://0.0.0.0:8020 subgraph.local.yaml",
+    "prepare:arbitrum-sepolia": "mustache networks/arbitrum-sepolia.json subgraph.template.yaml subgraph.arbitrum-sepolia.yaml",
+    "gen:arbitrum-sepolia": "graph codegen subgraph.arbitrum-sepolia.yaml",
+    "deploy-alchemy:arbitrum-sepolia": "dotenv cross-var -- graph deploy open-format-timestamp-to-block-number --version-label %ALCHEMY_SUBGRAPH_VERSION_ARBITRUM_SEPOLIA% --node https://subgraphs.alchemy.com/api/subgraphs/deploy --deploy-key %ALCHEMY_DEPLOY_KEY% --ipfs https://ipfs.satsuma.xyz subgraph.arbitrum-sepolia.yaml",
+    "build": "graph build",
+    "test": "graph test -v 0.6.0 --logs"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.71.0",
+    "@graphprotocol/graph-ts": "^0.35.1",
+    "cross-var": "^1.1.0",
+    "dotenv-cli": "^7.3.0",
+    "matchstick-as": "^0.6.0",
+    "mustache": "^4.2.0"
+  },
+  "packageManager": "yarn@1.22.22"
+}

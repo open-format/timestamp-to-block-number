@@ -1,0 +1,24 @@
+specVersion: 1.1.0
+description: Timestamp to block number
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: block
+    network: {{ network }}
+    source:
+      address: "0x0000000000000000000000000000000000000000"
+      startBlock: {{ startBlock }}
+      abi: None
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      abis:
+        - name: None
+          file: ./abis/None.json
+      entities:
+        - HourTimestamp
+      blockHandlers:
+        - handler: handleBlock
+      file: ./src/blockHandler.ts

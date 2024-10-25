@@ -1,0 +1,6 @@
+type HourTimestamp @entity(immutable: true) {
+  id: ID!
+  timestamp: BigInt!
+  blockTimestamp: BigInt!
+  blockNumber: BigInt!
+}
