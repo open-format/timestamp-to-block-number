@@ -4,3 +4,17 @@ type HourTimestamp @entity(immutable: true) {
   blockTimestamp: BigInt!
   blockNumber: BigInt!
 }
+
+type DayTimestamp @entity(immutable: true) {
+  id: ID!
+  timestamp: BigInt!
+  blockTimestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type WeekTimestamp @entity(immutable: true) {
+  id: ID!
+  timestamp: BigInt!
+  blockTimestamp: BigInt!
+  blockNumber: BigInt!
+}

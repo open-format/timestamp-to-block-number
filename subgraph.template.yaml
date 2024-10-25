@@ -19,6 +19,8 @@ dataSources:
           file: ./abis/None.json
       entities:
         - HourTimestamp
+        - DayTimestamp
+        - WeekTimestamp
       blockHandlers:
         - handler: handleBlock
       file: ./src/blockHandler.ts
