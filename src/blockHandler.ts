@@ -66,7 +66,9 @@ function floorToPreviousDay(timestamp: BigInt): BigInt {
 }
 
 function floorToPreviousWeek(timestamp: BigInt): BigInt {
-  return timestamp.div(secondsInWeek).times(secondsInWeek)
+  // Adjust to start week on Monday 00:00:00 with UTC epoch (which starts on Thursday)
+  let threeDays = secondsInDay.times(BigInt.fromI32(3));
+  return timestamp.plus(threeDays).div(secondsInWeek).times(secondsInWeek).minus(threeDays)
 }
 
 function isHourTimestampIndexed (id: string): boolean {
