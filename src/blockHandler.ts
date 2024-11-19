@@ -1,10 +1,6 @@
 import { ethereum, BigInt } from '@graphprotocol/graph-ts';
 import { HourTimestamp, DayTimestamp, WeekTimestamp} from "../generated/schema";
-
-export const secondsInHour = BigInt.fromI32(3600);
-export const secondsInDay  = secondsInHour.times(BigInt.fromI32(24));
-export const secondsInWeek  = secondsInDay.times(BigInt.fromI32(7));
-
+import { secondsInHour, secondsInDay, secondsInWeek } from "./constants";
 export function handleBlock(block: ethereum.Block): void {
   let hourTimestamp = floorToPreviousHour(block.timestamp);
   let isHourIndexed = isHourTimestampIndexed(hourTimestamp.toString())
