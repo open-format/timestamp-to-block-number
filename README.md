@@ -2,6 +2,14 @@
 
 A graphql API to get hourly, daily or weekly block numbers between two timestamps.
 
+## Endpoints
+| chain                      | endpoint                                                                                            |
+| -------------------------- | --------------------------------------------------------------------------------------------------- |
+| arbitrum sepolia (testnet) | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number/version/latest                |
+| aurora testnet             | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-aurora-testnet/version/latest |
+| aurora                     | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-aurora/version/latest         |
+
+
 ## Timestamps
 Timestamps are returned in the format of unix time floored to the nearest time interval based on UTC time.
 
