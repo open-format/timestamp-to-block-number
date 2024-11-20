@@ -62,7 +62,7 @@ query:
 }
 ```
 result:
-```graphql
+```json
 {
   "data": {
     "hourTimestamps": [
@@ -86,7 +86,7 @@ result:
 The block numbers "on the hour" between two timestamps
 
 query:
-```
+```graphql
 {
   hourTimestamps(
     where : {
@@ -102,7 +102,7 @@ query:
 }
 ```
 result:
-```graphql
+```json
 {
   "data": {
     "hourTimestamps": [
