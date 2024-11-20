@@ -9,7 +9,7 @@ For example:
 `1698050400` corresponds to `2024-10-23 11:00:00 UTC` which would be an `hour` time interval
 
 day intervals start at `00:00:00 UTC`
-week intervals start at `Sunday 00:00:00 UTC`
+week intervals start at `Monday 00:00:00 UTC`
 
 
 ## Block Numbers

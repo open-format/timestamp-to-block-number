@@ -1,10 +1,6 @@
 import { ethereum, BigInt } from '@graphprotocol/graph-ts';
 import { HourTimestamp, DayTimestamp, WeekTimestamp} from "../generated/schema";
-
-export const secondsInHour = BigInt.fromI32(3600);
-export const secondsInDay  = secondsInHour.times(BigInt.fromI32(24));
-export const secondsInWeek  = secondsInDay.times(BigInt.fromI32(7));
-
+import { secondsInHour, secondsInDay, secondsInWeek } from "./constants";
 export function handleBlock(block: ethereum.Block): void {
   let hourTimestamp = floorToPreviousHour(block.timestamp);
   let isHourIndexed = isHourTimestampIndexed(hourTimestamp.toString())
@@ -70,7 +66,9 @@ function floorToPreviousDay(timestamp: BigInt): BigInt {
 }
 
 function floorToPreviousWeek(timestamp: BigInt): BigInt {
-  return timestamp.div(secondsInWeek).times(secondsInWeek)
+  // Adjust to start week on Monday 00:00:00 with UTC epoch (which starts on Thursday)
+  let threeDays = secondsInDay.times(BigInt.fromI32(3));
+  return timestamp.plus(threeDays).div(secondsInWeek).times(secondsInWeek).minus(threeDays)
 }
 
 function isHourTimestampIndexed (id: string): boolean {
