@@ -5,9 +5,12 @@ A graphql API to get hourly, daily or weekly block numbers between two timestamp
 ## Endpoints
 | chain                      | endpoint                                                                                            |
 | -------------------------- | --------------------------------------------------------------------------------------------------- |
-| arbitrum sepolia (testnet) | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number/version/latest                |
-| aurora testnet             | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-aurora-testnet/version/latest |
-| aurora                     | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-aurora/version/latest         |
+| arbitrum sepolia (testnet) | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number/v0.0.4                |
+| aurora testnet             | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-aurora-testnet/v0.0.4 |
+| aurora                     | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-aurora/v0.0.4         |
+| base sepolia (testnet)     | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-base-sepolia/v0.0.4   |
+| base                       | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-base/v0.0.4           |
+
 
 
 ## Timestamps
