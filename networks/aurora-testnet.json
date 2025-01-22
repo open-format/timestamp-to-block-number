@@ -1,4 +1,5 @@
 {
+  "specVersion": "1.1.0",
   "network": "aurora-testnet",
   "startBlock": 178108780
 }

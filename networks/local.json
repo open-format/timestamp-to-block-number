@@ -1,4 +1,5 @@
 {
+  "specVersion": "1.1.0",
   "network": "mainnet",
   "startBlock": 0
 }
