@@ -1,4 +1,5 @@
 {
+  "specVersion": "1.1.0",
   "network": "arbitrum-sepolia",
   "startBlock": 32647240
 }

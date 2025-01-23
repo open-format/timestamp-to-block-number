@@ -10,6 +10,7 @@ A graphql API to get hourly, daily or weekly block numbers between two timestamp
 | aurora                     | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-aurora/v0.0.4         |
 | base sepolia (testnet)     | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-base-sepolia/v0.0.4   |
 | base                       | https://api.studio.thegraph.com/query/82634/timestamp-to-block-number-base/v0.0.4           |
+| matchain                       | https://subgraph.mobula.io/subgraphs/name/open-format-matchain-timestamp-to-block-number-v0_0_4         |
 
 
 
